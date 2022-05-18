@@ -5,8 +5,35 @@ element, index, and array itself. The function does not need to return any value
 
 Do not use the built in Array#forEach.
 
-Examples:
 
+*******************************************************************************/
+/*Psuedo Code
+create function with array & cb as arguements => function (array, cb)
+iterate through the array => for loop
+pass in element,index,array in the cb  => cb(el,index,array)
+no return value needed
+*/
+
+//Solution 1: For Loop
+// myForEach = (array,cb) => {
+//     for (let i = 0; i < array.length; i++){
+//         let el = array[i];
+//         cb(el,i,array)
+//     }
+// }
+
+
+
+//Solution 2: Map Method
+myForEach = (array,cb) => {
+    let value = array.map((element, i , array) =>{
+         cb(element, i, array)
+    })
+    return value
+}
+
+
+//Examples:
 myForEach(['a', 'b', 'c'], function (el, i) {
     console.log(el + ' is at index ' + i);
 }); // prints
@@ -19,13 +46,6 @@ myForEach(['laika', 'belka'], function (el) {
     test.push(el.toUpperCase());
 });
 console.log(test); // ['LAIKA', 'BELKA']
-*******************************************************************************/
-
-let myForEach = function() {
-
-};
-
-
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
