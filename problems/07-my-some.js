@@ -26,18 +26,20 @@ pseudoCode:
 // };
 
 
-// alternateSolution: not fixed
+// alternateSolution: not fixed :
+// forEach doesn't return a value;
+//forEach cannot be assign a variable to it
+//to use ForEach set a variable equal to the answer you want (i.e. line 35)
 
-// let mySome = (arr, cb) => {
-//     let answer = arr.forEach((el, i) => {
-//         if(cb(el, i)){
-//             return true
-//         } else {
-//             return false
-//         }
-//     })
-//     return answer
-// }
+let mySome = (arr, cb) => {
+    let result = false
+    arr.forEach((el, i) => {
+        if(cb(el, i)){
+            result = true
+        }
+    })
+    return result
+}
 
 
 let result1 = mySome([5, 1, 7, 9], function(ele, i) {
