@@ -5,6 +5,48 @@ true when passed into both callbacks.
 
 Examples:
 
+1. create function accepts arr, cb1, cb2
+2. create new Arr []
+3. iterate
+4. if cb1(el) && cb2(el)
+5.push el into newArr
+6. return newArr
+
+*******************************************************************************/
+
+// let andSelect = function(arr, cb1, cb2) {
+//     let newArr = []
+//     for (let i = 0; i < arr.length; i++) {
+//         let el = arr[i]
+//         if(cb1(el) && cb2(el)){
+//             newArr.push(el)
+//         }
+//     }
+//     return newArr
+// };
+
+// alternative solution
+// let andSelect = (arr, cb1, cb2) => {
+//     let newArr = []
+//     arr.forEach((el) => {
+//      if(cb1(el) && cb2(el)){
+//         newArr.push(el)
+//         }
+//     })
+//     return newArr
+// }
+let andSelect = (arr, cb1, cb2) => {
+    let newArr = []
+    arr.filter((el) => {
+        if(cb1(el) && cb2(el)){
+        newArr.push(el)
+        }
+    })
+    return newArr
+}
+    
+
+
 let isEven = function (n) {
     return n % 2 === 0;
 };
@@ -25,15 +67,6 @@ let startsWithA = function (s) {
 }
 console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  startsWithA));
 // [ 'APPLES', 'ART' ]
-
-*******************************************************************************/
-
-let andSelect = function() {
-
-};
-
-
-
 
 
 
