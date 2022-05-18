@@ -7,6 +7,39 @@ into the callback.
 
 Examples:
 
+pseudoCode:
+1. create function accepts arr, cb
+2. iterate through arr
+3. if statement passing in (el, i) into cb
+4.return false
+
+*******************************************************************************/
+
+// let mySome = function(arr, cb) {
+//     for(let i = 0; i < arr.length; i++){
+//         let el = arr[i]
+//         if(cb(el, i)){
+//             return true
+//         }
+//     }
+// return false
+// };
+
+
+// alternateSolution: not fixed
+
+// let mySome = (arr, cb) => {
+//     let answer = arr.forEach((el, i) => {
+//         if(cb(el, i)){
+//             return true
+//         } else {
+//             return false
+//         }
+//     })
+//     return answer
+// }
+
+
 let result1 = mySome([5, 1, 7, 9], function(ele, i) {
     return ele === i;
 });
@@ -21,13 +54,6 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
     return ele.length === 4;
 });
 console.log(result3);   // true
-*******************************************************************************/
-
-let mySome = function() {
-
-};
-
-
 
 
 

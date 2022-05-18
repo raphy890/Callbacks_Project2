@@ -10,6 +10,37 @@ problem.
 
 Examples:
 
+pseudoCode: 
+1. create function passing in arr, cb
+1.5 create new Arr
+2. iterate through arr
+3. passing into el into cb
+4. if cb el === false push into newArr
+5. return newArr
+
+
+
+*******************************************************************************/
+
+// let reject = function(arr, cb) {
+// let newArr = []
+// for (let el of arr){
+//     if(!cb(el)){
+//         newArr.push(el)
+//     }
+// }
+// return newArr
+// };
+ 
+// alternateSolution
+
+let reject = (arr, cb) => {
+    let newArr = arr.filter((el) => {
+        return (!cb(el))
+    })
+    return newArr
+}
+
 let isEven = function(n) {
     return n % 2 === 0;
 };
@@ -19,14 +50,6 @@ let hasA = function(s) {
     return s.toLowerCase().includes('a');
 };
 console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
-*******************************************************************************/
-
-let reject = function() {
-
-};
-
-
-
 
 
 
