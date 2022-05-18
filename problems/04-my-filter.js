@@ -5,8 +5,37 @@ the element. The function should return a new array containing
 the elements that result in true when passed to the callback.
 
 Do not use the built in Array#filter.
+*******************************************************************************/
+/*Psueo Code:
+create a function  => (array,cb)
+create a new array
+iterate through the array
+pass in element through the cb and pus into new array
+return array
+*/
 
-Examples:
+//Solution 1: For.. Of Method
+myFilter = (array, cb) => {
+    let NewArray = [];
+    for (let el of array) {
+        if (cb(el)) {
+            NewArray.push(el)
+        }
+    }
+    return NewArray
+};
+
+//Solution 2: Filter Method
+// myFilter = (array, cb) => {
+
+//     let NewArray = array.filter( (el) => {
+//         return (cb(el))
+//     })
+//     return NewArray
+// }
+
+
+//Examples:
 
 let result1 = myFilter([5, 7, 4, 3, 8], function (n) {
     return n % 2 === 0;
@@ -17,15 +46,6 @@ let result2 = myFilter(['choose', 'big', 'words', 'only'], function (s) {
     return s.length > 3;
 });
 console.log(result2);      // ['choose', 'words', 'only']
-*******************************************************************************/
-
-let myFilter = function() {
-
-};
-
-
-
-
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
