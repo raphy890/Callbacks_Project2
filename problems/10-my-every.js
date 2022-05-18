@@ -7,7 +7,7 @@ Do not use the built in Array#every.
 
 Examples:
 
-pseudoCode: 
+pseudoCode:
 1.  function takes in arr, cb
 2.  create variable = answer
 3. forEach
@@ -15,6 +15,8 @@ pseudoCode:
 5. return true
 *******************************************************************************/
 
+
+//Solution1: ForEach Method
 let myEvery = function(arr, cb) {
     let answer = true
     arr.forEach((el) => {
@@ -25,7 +27,7 @@ let myEvery = function(arr, cb) {
 return answer
 };
 
-// solution #2
+// solution #2: For Looop
 // let myEvery = (arr, cb) => {
 //     for (let i = 0; i < arr.length; i++){
 //         if (cb(arr[i]) === false) {
@@ -34,6 +36,7 @@ return answer
 //     }
 //     return true;
 // }
+
 
 let isEven = function (num) {
     return num % 2 === 0;

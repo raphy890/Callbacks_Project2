@@ -15,7 +15,7 @@ value = (cb(value)
 return final value from passing into each cb
 */
 
-//Solution1:
+//Solution1: For...of
 // let chainMap = function(value,...cb){
 //     for (let callback of cb) {
 //         value = callback(value)
