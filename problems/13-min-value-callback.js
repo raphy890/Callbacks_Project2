@@ -14,9 +14,10 @@ if cb !== undefined => pass in smallest value into cb()
 return cb(smallestvalue)
 */
 
-//Solution 1:
+//Solution 1: Reduce Method
 minValueCallback = (array, cb) => {
 
+    //1. Define the smallest value in the area
     let smallestValue = array.reduce((smallNum,currentNum) => {
         if (smallNum > currentNum){
             return currentNum
@@ -24,10 +25,12 @@ minValueCallback = (array, cb) => {
         return smallNum
     },)
 
+    //2. If cb is included in the parameter, return value from passing smallest value into callback
     if (cb !== undefined){
         return cb(smallestValue)
     }
 
+    //3. If cb is not included in the parameter, return the smallest value
     else return smallestValue
     return smallestValue
 }
