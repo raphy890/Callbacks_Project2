@@ -17,7 +17,7 @@ return array
 //Solution 1: For.. Of Method
 myFilter = (array, cb) => {
     let NewArray = [];
-    for (let el of array) {
+    for (let el of array) {  // for( let i = 0; i < arr.length ; i ++)
         if (cb(el)) {
             NewArray.push(el)
         }

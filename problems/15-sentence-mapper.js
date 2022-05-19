@@ -11,7 +11,7 @@ return a new sentence
 */
 
 //Solution1: For Loop
-// sentenceMapper = (string,cb) => {
+// let sentenceMapper = (string,cb) => {
 //     let array = string.split(' ')           //1.string -> array
 //     let NewSentence= []                     //2.create a newarray
 //     for(let i=0; i < array.length; i++){    //3.Iterate through the array
@@ -23,7 +23,7 @@ return a new sentence
 // };
 
 //Solution2: For Each
-sentenceMapper = (string,cb) => {
+let sentenceMapper = (string,cb) => {
     let array = string.split(' ')           //1.string -> array
     let NewSentence= []                     //2.create a newarray
     array.forEach(element => {              //3.Iterate through the array
