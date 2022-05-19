@@ -3,6 +3,13 @@ Write a function `atMost` that accepts an array, a max number, and a callback as
 arguments. The function should return a boolean indicating whether or not there are
 at most (fewer than or equal to) `max` elements of the array that result in true
 when passed into the callback.
+*******************************************************************************/
+
+let atMost = function() {
+
+};
+
+
 
 Examples:
 
@@ -19,15 +26,6 @@ console.log(atMost([6, 2, 4, 1], 3, isPositive));                               
 console.log(atMost(['boat', 'cat', 'car'], 1, startsWithA));                    // true
 console.log(atMost(['boat', 'cat', 'car', 'academy'], 1, startsWithA));         // true
 console.log(atMost(['boat', 'arc', 'cat', 'car', 'academy'], 1, startsWithA));  // false
-
-*******************************************************************************/
-
-let atMost = function() {
-
-};
-
-
-
 
 
 

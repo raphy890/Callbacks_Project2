@@ -11,8 +11,6 @@ pass each element & index in the callback => cb(ele,i)
 return value from passing in cb(ele,i)
 */
 
-
-
 //Solution1: For Each Method
 // let mapMutator = (array,cb) => {
 
@@ -22,13 +20,20 @@ return value from passing in cb(ele,i)
 // };
 
 
-
 //Solution2: For Loop
+// let mapMutator = (array,cb) => {
+//     for(let i =0; i < array.length; i++){
+//         let el= array[i]
+//         array[i] = cb(el,i)
+//     }
+// }
+
+
+//Solution3: Array.Map()
 let mapMutator = (array,cb) => {
-    for(let i =0; i < array.length; i++){
-        let el= array[i]
-        array[i] = cb(el,i)
-    }
+    array.map((ele,i) => {
+        array[i] = cb(ele,i)
+    })
 }
 
 
