@@ -9,8 +9,40 @@ In other words,
     - the third element should be passed to callback 1
     - the fourth element should be passed to callback 2
     - ... and so on
+/
+*******************************************************************************/
 
-Examples:
+//Solution1: For Loo[]
+// let alternatingMap = (array,cb1,cb2) => {
+//     NewArray = []
+
+//     for(let i=0; i<array.length; i=i+1){
+//         el= array[i]
+//         if (i%2 ==0){
+//         NewArray.push(cb1(el))
+//         }
+//         else NewArray.push(cb2(el))
+//     }
+//     return NewArray
+// };
+
+//Solution 2: Map()
+let alternatingMap = (array,cb1,cb2) => {
+    newArray = []
+
+    array.map((el,i)=>{
+        if (i % 2 ==0){
+        newArray.push(cb1(el))
+        }
+        else newArray.push(cb2(el))
+    })
+    return newArray
+};
+
+
+
+
+//Examples:
 
 let triple = function (n) {
     return 3 * n;
@@ -32,16 +64,6 @@ let whisper = function (s) {
 };
 console.log(alternatingMap(['hEy', 'EVERYone', 'whats', 'uP??'], yell, whisper));
 // [ 'HEY!', '..everyone..', 'WHATS!', '..up??..' ]
-
-*******************************************************************************/
-
-
-let alternatingMap = function() {
-
-};
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = alternatingMap;

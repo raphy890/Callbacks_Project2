@@ -8,6 +8,14 @@ the accumulator and call the callback for each of the remaining elements in the 
 passing in the current accumulator and current element into the callback. Upon calling the callback,
 the accumulator should be set to the result of the callback.
 
+*******************************************************************************/
+
+let mySimpleReduce = function() {
+
+};
+
+
+
 Examples:
 
 let result1 = mySimpleReduce([5, 3, 2, 4], function(sum, el) {
@@ -32,14 +40,6 @@ console.log(result3); // 8
 AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Explain, but don't code, how you would refactor this problem to take in an
   optional initial accumulator
-*******************************************************************************/
-
-let mySimpleReduce = function() {
-
-};
-
-
-
 
 
 
