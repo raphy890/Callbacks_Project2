@@ -5,13 +5,25 @@ at most (fewer than or equal to) `max` elements of the array that result in true
 when passed into the callback.
 *******************************************************************************/
 
-let atMost = function() {
+//Solution 1: For Each
+let atMost = (array,maxNum,cb) => {
+    let answer = true
+    let count = 0
 
+    array.forEach(element => {
+        if (cb(element)){
+            count++
+        }
+    })
+    if( count > maxNum){
+        answer = false
+    }
+    return answer
 };
 
 
 
-Examples:
+//Examples:
 
 let isPositive = function (n) {
     return n > 0;
